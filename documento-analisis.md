@@ -71,10 +71,3 @@ El proyecto fue desarrollado con apoyo inicial de una herramienta de IA para con
 - `POST /playlist/next`: (Dequeue) retira la canción del frente y devuelve la nueva cola.
 
 En el cliente, cada archivo MP3 se mapea por `id` a un `ObjectURL` generado con `URL.createObjectURL(file)`. Cuando el servidor indica qué `id` está en `current`, el frontend busca el `ObjectURL` local y lo asigna al `<audio>` para reproducir.
-
-## Preguntas para sustentación
-1. ¿Por qué elegiste una cola FIFO para esta aplicación?
-2. ¿Qué diferencia hay entre Dequeue y Peek?
-3. ¿Cómo garantiza el servidor que la cola mantiene el orden?
-4. ¿Por qué no se usó una base de datos en este proyecto?
-5. ¿Qué pasaría si se quisiera agregar persistencia a la cola?

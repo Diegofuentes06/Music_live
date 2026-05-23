@@ -96,5 +96,5 @@
 - Entregable:
   - README.md, documento-analisis.md, historial-prompts.md.
 
-## Nota de honestidad
-Este proyecto fue construido con apoyo inicial de una herramienta de IA para acelerar la implementación y la documentación. La IA ayudó a escribir código, generar la interfaz y la documentación. La estudiante supervisó, probó localmente y debe revisar y comprender todo el contenido para la sustentación.
+
+Este proyecto fue construido con apoyo inicial de una herramienta de IA para acelerar la implementación y la documentación. La IA ayudó a escribir código, generar la interfaz y la documentación. El estudiante supervisó, probó localmente y debe revisar y comprender todo el contenido para la sustentación.
