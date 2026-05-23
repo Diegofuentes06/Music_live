@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MUSIC LIVE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero-card">
+      <div class="hero-text">
+        <span class="tagline">FIFO</span>
+        <h1>MUSIC LIVE</h1>
+        <p>Cola de reproducción compartida. La primera canción agregada es la primera en sonar.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="load-demo" class="button secondary">Cargar demo</button>
+        <button id="clear-queue" class="button secondary">Limpiar cola</button>
+      </div>
+    </section>
+
+    <section class="grid-layout">
+      <article class="panel panel-form">
+        <h2>Agregar canción</h2>
+        <div id="file-uploader">
+          <label class="file-label">
+            Seleccionar archivo MP3
+            <input id="file-input" type="file" accept=".mp3,audio/mpeg" multiple />
+          </label>
+          <label>
+            Añadido por
+            <input id="added-by" type="text" name="addedBy" placeholder="Tu nombre" />
+          </label>
+          <div style="display:flex;gap:12px;margin-top:12px;">
+            <button id="add-file" class="button primary">Agregar a la cola</button>
+            <button id="add-metadata" class="button secondary">Agregar manual (metadatos)</button>
+          </div>
+          <form id="song-form" style="display:none;margin-top:12px;">
+            <label>
+              Título
+              <input type="text" name="title" placeholder="Campus Beat" />
+            </label>
+            <label>
+              Artista
+              <input type="text" name="artist" placeholder="Live Band" />
+            </label>
+            <label>
+              Duración
+              <input type="text" name="duration" placeholder="03:15" />
+            </label>
+            <label>
+              Añadido por
+              <input type="text" name="addedBy" placeholder="Ana" />
+            </label>
+            <button type="submit" class="button primary">Agregar a la cola</button>
+          </form>
+        </div>
+      </article>
+
+      <article class="panel panel-now-playing">
+        <h2>Sonando ahora</h2>
+        <div id="now-playing-card" class="now-playing-card">
+          <div class="vinyl-wrapper">
+            <div id="vinyl" class="vinyl"></div>
+            <div class="vinyl-ring"></div>
+          </div>
+          <div class="track-info">
+            <p id="now-playing-message" class="status-text">No hay canción reproduciéndose.</p>
+            <p id="now-playing-details" class="details"></p>
+            <audio id="audio-player" controls preload="none"></audio>
+            <div class="player-actions">
+              <button id="play-btn" class="button primary">Play</button>
+              <button id="pause-btn" class="button secondary">Pause</button>
+              <button id="next-btn" class="button secondary">Next</button>
+            </div>
+          </div>
+        </div>
+        <p class="explain"><strong>Peek:</strong> consultar la canción actual sin retirarla.</p>
+        <button id="play-next" class="button primary">Reproducir siguiente</button>
+      </article>
+
+      <article class="panel panel-next">
+        <h2>Siguiente en sonar</h2>
+        <div id="next-card" class="status-card">
+          <p class="status-text">No hay canción siguiente.</p>
+          <p id="next-details" class="details"></p>
+        </div>
+      </article>
+
+      <article class="panel panel-queue">
+        <div class="panel-header">
+          <h2>Cola de reproducción</h2>
+          <span id="queue-count" class="tag-count">0 canciones</span>
+        </div>
+        <ul id="queue-list" class="queue-list"></ul>
+        <h3 style="margin-top:18px">Historial de reproducidas</h3>
+        <ul id="history-list" class="queue-list"></ul>
+      </article>
+    </section>
+
+    <section class="explanation-card">
+      <p>FIFO: la primera canción agregada es la primera en reproducirse.</p>
+      <p><strong>Enqueue:</strong> agregar una nueva canción al final de la cola.</p>
+      <p><strong>Dequeue:</strong> retirar la canción del frente para continuar con la siguiente.</p>
+      <p><strong>Peek:</strong> consultar la canción actual sin retirarla de la cola.</p>
+      <p><strong>Recorrido:</strong> mostrar todas las canciones en orden FIFO.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #070b10;
+  color: #e5f9d4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(25, 255, 147, 0.05), transparent 40%),
+    linear-gradient(180deg, #08101a 0%, #05070b 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1200px, calc(100% - 32px));
+  margin: 24px auto;
+  display: grid;
+  gap: 24px;
+}
+
+.hero-card,
+.panel {
+  background: rgba(13, 20, 31, 0.95);
+  border: 1px solid rgba(62, 255, 141, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  letter-spacing: -0.05em;
+}
+
+.hero-text p,
+.explanation-card p,
+.status-text {
+  margin: 0;
+  color: #b4f5aa;
+}
+
+.tagline,
+.tag-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(56, 255, 140, 0.12);
+  color: #c2ffb4;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button.button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: linear-gradient(135deg, #4eff97, #1fc980);
+  color: #04110a;
+  box-shadow: 0 18px 30px rgba(17, 255, 148, 0.16);
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #d9ffdc;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.panel-form {
+  grid-column: span 4;
+}
+
+.panel-now-playing,
+.panel-next {
+  grid-column: span 4;
+}
+
+.panel-queue {
+  grid-column: span 12;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #cdecc9;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #eefdf4;
+}
+
+.status-card,
+.now-playing-card {
+  background: rgba(11, 18, 31, 0.95);
+  border: 1px solid rgba(92, 255, 164, 0.12);
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.now-playing-card {
+  display: grid;
+  gap: 18px;
+  align-items: center;
+}
+
+.vinyl-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.vinyl {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #46ff9c, #0a2619 40%);
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+.vinyl.spinning {
+  animation: spin 8s linear infinite;
+}
+
+.vinyl-ring {
+  position: absolute;
+  inset: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.track-info {
+  text-align: center;
+}
+
+.details {
+  margin-top: 12px;
+  color: #d9ffe1;
+  font-size: 0.97rem;
+}
+
+.queue-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.queue-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(15, 24, 39, 0.95);
+  border: 1px solid rgba(56, 255, 140, 0.1);
+}
+
+.queue-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #e7ffdf;
+}
+
+.queue-item span {
+  color: #c0f5be;
+  font-size: 0.93rem;
+}
+
+.explanation-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(79, 255, 116, 0.1);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .panel-form,
+  .panel-now-playing,
+  .panel-next {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    width: calc(100% - 24px);
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .vinyl-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

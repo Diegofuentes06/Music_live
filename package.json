@@ -1,0 +1,15 @@
+{
+  "name": "music-live",
+  "version": "1.0.0",
+  "description": "MUSIC LIVE - Cola de reproduccion compartida con API REST y estructura FIFO.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/playlistQueue.test.js"
+  },
+  "author": "Estudiante",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
